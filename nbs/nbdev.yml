@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "models"
+  site-url: "https://sky1ove.github.io/models"
+  description: "A collection of models"
+  repo-branch: main
+  repo-url: "https://github.com/sky1ove/models"
