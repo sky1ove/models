@@ -117,7 +117,7 @@ class Attn_dynamic(nn.Module):
 
         return x
 
-# %% ../nbs/RNAfolding.ipynb 21
+# %% ../nbs/RNAfolding.ipynb 20
 class SE_Block(nn.Module):
     "credits: https://github.com/moskomule/senet.pytorch/blob/master/senet/se_module.py#L4"
     def __init__(self, channel, reduction=1):
@@ -136,7 +136,7 @@ class SE_Block(nn.Module):
         y = self.excitation(y)[:,:,None,None]
         return x * y.expand_as(x)
 
-# %% ../nbs/RNAfolding.ipynb 26
+# %% ../nbs/RNAfolding.ipynb 25
 class ResConv2dSimple(nn.Module):
     def __init__(self, in_c, out_c, kernel_size=7, use_se = False):
         super().__init__()
@@ -167,7 +167,7 @@ class ResConv2dSimple(nn.Module):
         x = self.res(x) + self.conv(x)
         return x
 
-# %% ../nbs/RNAfolding.ipynb 30
+# %% ../nbs/RNAfolding.ipynb 29
 class BppTransformerEncoder(nn.Module):
     def __init__(self,
                  ni, # embedding dim
@@ -202,7 +202,7 @@ class BppTransformerEncoder(nn.Module):
 
         return x
 
-# %% ../nbs/RNAfolding.ipynb 40
+# %% ../nbs/RNAfolding.ipynb 38
 class BppRNAformer(nn.Module):
     def __init__(self, nembed=192, nheads=6,**kwargs):
 
