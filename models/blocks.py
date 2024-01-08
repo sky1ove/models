@@ -4,10 +4,11 @@
 __all__ = ['make_model', 'lin', 'SelfAttn', 'SE', 'Res_SE']
 
 # %% ../nbs/01_blocks.ipynb 3
-import math, torch, torch.nn as nn,fastcore.all as fc
+import graphviz,math, torch, torch.nn as nn,fastcore.all as fc
 from einops import rearrange
 from .core import *
 from fastcore.all import partial
+graphviz.set_jupyter_format('png')
 
 # %% ../nbs/01_blocks.ipynb 5
 def make_model(block_type, units, **kwargs):
